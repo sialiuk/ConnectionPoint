@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {21A13851-A7B0-4402-86E1-EA26B3A146DA} = s 'Painter Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{B6B96E5D-E221-4F54-BE3C-0C2992C6ACB3}'
+			Version = s '1.0'
+		}
+	}
+}
